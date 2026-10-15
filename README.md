@@ -1,1 +1,1 @@
-# GMA--project-homepage
+# GMA-project-homepage
