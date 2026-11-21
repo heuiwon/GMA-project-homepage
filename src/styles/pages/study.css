@@ -1,12 +1,1 @@
 /* PAGE 6 · 7. 학업에 활용하기 목록 · 상세 전용 스타일 */
-.ethics-notice .notice-banner a {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-primary);
-  text-decoration: none;
-  margin: 0 16px;
-}
-
-.ethics-notice .notice-banner a:hover {
-  text-decoration: underline;
-}

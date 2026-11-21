@@ -17,3 +17,14 @@ const writingButton = createButton({
 });
 
 writingButtonArea.appendChild(writingButton);
+
+const ethicsWarningButtonArea = document.querySelector("#ethics-warning-button");
+
+const ethicsWarningButton = createButton({
+    label: "윤리 지침 다시보기",
+    variant: "text",
+    href: "onboarding.html"
+    //onclick?
+});
+
+ethicsWarningButtonArea.appendChild(ethicsWarningButton);
