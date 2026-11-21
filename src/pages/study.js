@@ -5,6 +5,15 @@ import { renderHeader } from "../components/header.js";
 import { renderFooter } from "../components/footer.js";
 import { createButton } from "../components/button.js";
 
-
 renderHeader();
 renderFooter();
+
+const writingButtonArea = document.querySelector("#writing-button");
+
+const writingButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "writing.html"
+});
+
+writingButtonArea.appendChild(writingButton);
