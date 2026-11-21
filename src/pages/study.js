@@ -3,6 +3,8 @@
 
 import { renderHeader } from "../components/header.js";
 import { renderFooter } from "../components/footer.js";
+import { createButton } from "../components/button.js";
+
 
 renderHeader();
 renderFooter();
