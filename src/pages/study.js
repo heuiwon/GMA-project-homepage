@@ -18,6 +18,26 @@ const writingButton = createButton({
 
 writingButtonArea.appendChild(writingButton);
 
+const mathButtonArea = document.querySelector("#math-button");
+
+const mathButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "math.html"
+});
+
+mathButtonArea.appendChild(mathButton);
+
+const lectureButtonArea = document.querySelector("#lecture-button");
+
+const lectureButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "lecture.html"
+});
+
+lectureButtonArea.appendChild(lectureButton);
+
 const ethicsWarningButtonArea = document.querySelector("#ethics-warning-button");
 
 const ethicsWarningButton = createButton({
