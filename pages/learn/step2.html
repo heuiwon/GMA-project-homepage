@@ -9,25 +9,32 @@
   <link rel="stylesheet" href="/src/styles/components.css" />
   <link rel="stylesheet" href="/src/styles/pages/step.css" />
 </head>
-<body>
+<body class="step2">
   <!-- 공통 컴포넌트: Header (현재 메뉴: learn) -->
   <header id="header" data-active="learn"></header>
 
-  <main id="main">
-    <!-- PAGE 3-2. AI 단계학습 — Step 2 상세 -->
-    <nav class="breadcrumb">단계별 학습 &gt; Step 2</nav>
-    <h1 data-step="2">AI 사용 방법</h1>
-    <p class="step-desc">대표적인 생성형 AI 서비스의 특징과 기본 인터페이스 활용 방법을 익혀보세요.</p>
+  <main id="main" class="page page-detail">
+    <div class="page-title">
+      <nav class="page-title__path" aria-label="현재 위치">
+        <a href="/pages/learn/index.html">AI 단계별 학습</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">AI 사용 방법</span>
+      </nav>
+      <h1 class="page-title__heading" data-step="2">AI 사용 방법</h1>
+      <p class="page-title__desc">대표적인 생성형 AI 서비스의 특징과 기본 인터페이스 활용 방법을 익혀보세요.</p>
+    </div>
 
     <!-- Box(기본) -->
-    <section class="step-section">
-      <h2>1. 대표 AI 서비스(ChatGPT 등) 소개</h2>
-      <div class="step-section__body">
-        <p>- ChatGPT (OpenAI): 텍스트 생성, 논리 추론, 코딩, 데이터 분석, 이미지 생성 등 전반적인 범용성이 가장 뛰어난 대표 서비스입니다.</p>
-        <p>- Claude (Anthropic): 자연스러운 한국어·영어 문체와 긴 문서를 한 번에 읽고 요약하는 긴 문맥 파악 능력, 코드·문서 작성에 강점이 있습니다.</p>
-        <p>- Gemini (Google): Google 검색, Gmail, Google Drive, YouTube 등 Google 생태계와의 강력한 연동 및 멀티모달(텍스트·이미지·영상) 처리에 최적화되어 있습니다.</p>
-        <p>- Perplexity (Perplexity AI): 실시간 웹 검색을 기반으로 답변을 생성하며, 문장마다 출처 링크를 명확히 제시해 자료 조사 및 팩트체크에 특화되어 있습니다.</p>
-        <p>- 밑의 사용법에서 제공하는 기본 사용 방법은 ChatGPT를 기반으로 설명됩니다.</p>
+    <section class="content-section step2-section--text">
+      <h2 class="content-section__heading">① 대표 AI 서비스 소개</h2>
+      <div class="content-section__body step2-lesson">
+        <ul>
+          <li>ChatGPT (OpenAI): 텍스트 생성, 논리 추론, 코딩, 데이터 분석, 이미지 생성 등 전반적인 범용성이 가장 뛰어난 대표 서비스입니다.</li>
+          <li>Claude (Anthropic): 자연스러운 한국어·영어 문체와 긴 문서를 한 번에 읽고 요약하는 긴 문맥 파악 능력, 코드·문서 작성에 강점이 있습니다.</li>
+          <li>Gemini (Google): Google 검색, Gmail, Google Drive, YouTube 등 Google 생태계와의 강력한 연동 및 멀티모달(텍스트·이미지·영상) 처리에 최적화되어 있습니다.</li>
+          <li>Perplexity (Perplexity AI): 실시간 웹 검색을 기반으로 답변을 생성하며, 문장마다 출처 링크를 명확히 제시해 자료 조사 및 팩트체크에 특화되어 있습니다.</li>
+        </ul>
+        <p>밑의 사용법에서 제공하는 기본 사용 방법은 ChatGPT를 기반으로 설명됩니다.</p>
       </div>
     </section>
     <!-- Box(기본) -->
@@ -44,10 +51,11 @@
     <section class="step-section">
       <h2>3. 대화 시작 및 새로운 대화 관리</h2>
       <div class="step-section__body"><h3>AI는 하나의 대화창(세션) 안에서 나눈 이전 질문과 답변을 기억하며 대화를 이어갑니다. 따라서 주제가 바뀔 때마다 새로운 대화를 여는 것이 답변의 정확도를 높이는 핵심입니다.</h3>
-        <p>- 새 채팅 시작: 좌측 사이드바 상단의 ‘새 채팅’ 아이콘을 클릭하면 이전 맥락이 초기화된 깨끗한 대화창이 열립니다.</p>
-        <p>- 대화 목록 정리(이름 변경·고정): 사이드바의 각 대화 항목 옆 ‘더보기’ 메뉴를 눌러 제목을 알아보기 쉽게 ‘이름 변경’하거나, 자주 찾는 중요한 대화를 상단에 고정할 수 있습니다.</p>
-        <p>- 대화 보관 및 삭제: 사이드바에서 치우고 싶지만 기록은 남기고 싶을 때는 ‘보관’을 선택하며(설정 > 데이터 제어에서 복원 가능), 영구히 지우려면 삭제를 선택합니다.</p>
-        <p>- 프로젝트(폴더) 기능 활용: 관련 있는 여러 대화와 참고 파일, 공통 지시사항을 하나의 주제별 공간으로 묶어 체계적으로 관리할 수 있습니다.</p></div>
+        <li>새 채팅 시작: 좌측 사이드바 상단의 ‘새 채팅’ 아이콘을 클릭하면 이전 맥락이 초기화된 깨끗한 대화창이 열립니다.</li>
+        <li>대화 목록 정리(이름 변경·고정): 사이드바의 각 대화 항목 옆 ‘더보기’ 메뉴를 눌러 제목을 알아보기 쉽게 ‘이름 변경’하거나, 자주 찾는 중요한 대화를 상단에 고정할 수 있습니다.</li>
+        <li>대화 보관 및 삭제: 사이드바에서 치우고 싶지만 기록은 남기고 싶을 때는 ‘보관’을 선택하며(설정 > 데이터 제어에서 복원 가능), 영구히 지우려면 삭제를 선택합니다.</li>
+        <li>프로젝트(폴더) 기능 활용: 관련 있는 여러 대화와 참고 파일, 공통 지시사항을 하나의 주제별 공간으로 묶어 체계적으로 관리할 수 있습니다.</li>
+      </div>
     </section>
     <!-- Box(기본) -->
     <section class="step-section">
