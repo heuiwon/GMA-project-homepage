@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>강의 이해 | AIMaster</title>
+  <title>강의 분석 및 퀴즈 생성 | AIMaster</title>
   <link rel="stylesheet" href="/src/styles/reset.css" />
   <link rel="stylesheet" href="/src/styles/variables.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
@@ -13,23 +13,30 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: study) -->
   <header id="header" data-active="study"></header>
 
-  <main id="main" class="study-detail">
-    <!-- PAGE 7. 학업에 활용하기 — 상세: 강의 이해 (강의자료 학습 + 퀴즈 만들기) -->
-    <nav class="breadcrumb"><a href="./index.html">학업에 활용하기</a> &gt; 강의 이해</nav>
-    <h1>강의 이해</h1>
+  <main id="main" class="page page--detail">
+    <div class="page-title">
+      <nav class="page-title__path" aria-label="현재 위치">
+        <a href="./index.html">학업에 활용하기</a> &gt; 강의 분석 및 퀴즈 생성
+      </nav>
+      <h1 class="page-title__heading">강의 분석 및 퀴즈 생성</h1>
+      <p class="page-title__desc">AI로 어려운 강의 내용을 이해하고 복습 퀴즈로 배운 내용을 확인해 보세요.</p>
+    </div>
 
-    <section class="study-section box box--default" id="situation">
-      <h2>활용 상황 설명</h2>
-      <p>대학 수업에서 이해하기 어려웠거나 더 알아보고 싶은 부분이 있을 때 AI를 활용해 보세요. 아래 두 프롬프트를 복사한 뒤 과목, 학습 수준, 목표, 출제 범위를 자신에게 맞게 바꿔 쓸 수 있어요.</p>
+    <section class="content-section" id="situation">
+      <h2 class="content-section__heading">① 활용 상황 설명</h2>
+      <div class="content-section__body">
+        <p>대학 수업에서 이해하기 어려웠거나 더 알아보고 싶은 부분이 있을 때 AI를 활용해 보세요.</p>
+        <p>아래 두 프롬프트를 복사한 뒤 과목, 학습 수준, 목표, 출제 범위를 자신에게 맞게 바꿔 쓸 수 있어요.</p>
+      </div>
     </section>
 
-    <section class="study-section box box--default" id="how-to">
-      <h2>활용 방법</h2>
-      <ol class="study-steps">
-        <li>공유할 수 있는 강의자료(PDF, 필기 등)를 업로드합니다.</li>
-        <li>자신의 학습 수준과 목표를 프롬프트에 포함합니다.</li>
-        <li><strong>이해되지 않는 개념을 단계별로 설명해 달라고 요청합니다.</strong>
-          <h3>[5-1] 강의 이해 프롬프트</h3>
+    <section class="content-section content-section--steps" id="how-to">
+      <h2 class="content-section__heading">② 활용 방법</h2>
+      <ol class="section" role="list">
+        <li class="usage-step"><h3 class="usage-step__heading">1. 공유할 수 있는 강의자료(PDF, 필기 등)를 업로드합니다.</h3></li>
+        <li class="usage-step"><h3 class="usage-step__heading">2. 자신의 학습 수준과 목표를 프롬프트에 포함합니다.</h3></li>
+        <li class="usage-step"><h3 class="usage-step__heading">3. 이해되지 않는 개념을 단계별로 설명해 달라고 요청합니다.</h3>
+          <p class="content-section__body"><strong>[5-1] 강의 이해 프롬프트</strong></p>
           <div class="prompt-box">
             <p class="prompt-box__text">너는 대학생을 가르치는 전문 튜터야.
 첨부한 강의자료를 바탕으로 내용을 설명해 줘.
@@ -45,11 +52,11 @@
 3. 중요한 용어는 영어와 한국어를 함께 표시해 줘.
 4. 강의자료에 없는 내용은 별도로 구분해 줘.
 5. 마지막에 핵심 개념을 정리해 줘.</p>
-            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+            <button type="button" class="btn btn--primary" style="align-self: flex-end" data-copy>복사하기</button>
           </div>
         </li>
-        <li><strong>학습한 범위에서 복습 퀴즈를 출제해 달라고 요청합니다.</strong>
-          <h3>[5-2] 퀴즈 생성 프롬프트</h3>
+        <li class="usage-step"><h3 class="usage-step__heading">4. 학습한 범위에서 복습 퀴즈를 출제해 달라고 요청합니다.</h3>
+          <p class="content-section__body"><strong>[5-2] 퀴즈 생성 프롬프트</strong></p>
           <div class="prompt-box">
             <p class="prompt-box__text">첨부한 강의자료를 기반으로 복습 퀴즈를 만들어 줘.
 
@@ -64,51 +71,51 @@
 2. 내가 답변하기 전까지 정답을 공개하지 마.
 3. 답변 후 정답과 해설을 제공해 줘.
 4. 틀린 문제와 관련된 개념을 다시 설명해 줘.</p>
-            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+            <button type="button" class="btn btn--primary" style="align-self: flex-end" data-copy>복사하기</button>
           </div>
         </li>
-        <li>틀린 문제를 분석하고 관련 개념을 다시 공부합니다.</li>
+        <li class="usage-step"><h3 class="usage-step__heading">5. 틀린 문제를 분석하고 관련 개념을 다시 공부합니다.</h3></li>
       </ol>
 
-      <p><strong>검증 방법</strong> AI의 설명과 퀴즈 정답을 원본 강의자료와 대조하세요.</p>
+      <p class="content-section__body"><strong>검증 방법</strong> AI의 설명과 퀴즈 정답을 원본 강의자료와 대조하세요.</p>
     </section>
 
-    <section class="study-section" id="ai-tools">
-      <h2>추천 AI 도구</h2>
-      <ul class="study-tools">
-        <li class="box box--default study-tool">
-          <img src="/images/icons/chatgpt.png" alt="" width="32" height="32">
-          <div>
-            <h3>ChatGPT (Study Mode)</h3>
-            <p>단계별 개념 설명과 이해도 점검</p>
+    <section class="section" id="ai-tools">
+      <h2 class="section__heading section__heading--lg">추천 AI 도구</h2>
+      <ul class="grid-2" role="list">
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/chatgpt.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">ChatGPT (Study Mode)</h3>
+            <p class="ai-tool-card__desc">단계별 개념 설명과 이해도 점검</p>
           </div>
           <a class="btn btn--small" href="https://chatgpt.com/studymode" aria-label="ChatGPT (Study Mode) 바로가기">바로가기 ↗</a>
         </li>
-        <li class="box box--default study-tool">
-          <div>
-            <h3>NotebookLM</h3>
-            <p>강의 PDF 요약과 복습 퀴즈 만들기</p>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">NotebookLM</h3>
+            <p class="ai-tool-card__desc">강의 PDF 요약과 복습 퀴즈 만들기</p>
           </div>
           <a class="btn btn--small" href="https://notebooklm.google.com/" aria-label="NotebookLM 바로가기">바로가기 ↗</a>
         </li>
-        <li class="box box--default study-tool">
-          <img src="/images/icons/claude.png" alt="" width="32" height="32">
-          <div>
-            <h3>Claude</h3>
-            <p>긴 강의자료의 핵심 개념과 연결 관계 정리</p>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/claude.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">Claude</h3>
+            <p class="ai-tool-card__desc">긴 강의자료의 핵심 개념과 연결 관계 정리</p>
           </div>
           <a class="btn btn--small" href="https://claude.ai/" aria-label="Claude 바로가기">바로가기 ↗</a>
         </li>
-        <li class="box box--default study-tool">
-          <img src="/images/icons/gemini.png" alt="" width="32" height="32">
-          <div>
-            <h3>Gemini (Guided Learning)</h3>
-            <p>시각자료와 함께 단계별로 개념 학습</p>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/gemini.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">Gemini (Guided Learning)</h3>
+            <p class="ai-tool-card__desc">시각자료와 함께 단계별로 개념 학습</p>
           </div>
           <a class="btn btn--small" href="https://gemini.google.com/" aria-label="Gemini (Guided Learning) 바로가기">바로가기 ↗</a>
         </li>
       </ul>
-      <p><a class="study-help-link" href="https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt">ChatGPT 학습 모드 사용법</a></p>
+      <p><a class="btn btn--text" href="https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt">ChatGPT 학습 모드 사용법</a></p>
     </section>
   </main>
 
