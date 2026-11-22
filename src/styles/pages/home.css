@@ -1,1 +1,56 @@
-/* PAGE 1. Home 전용 스타일 */
+/* PAGE 1. Home 전용 스타일*/
+
+/* ---------- 본문 틀: 위아래 여백 · 블록 간격 줄이기 ---------- */
+/* 공통값: 위 48 · 아래 80 · 간격 40 */
+.page.home {
+  gap: 24px;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+/* ---------- Hero: 패딩 · 제목 크기 줄이기 ---------- */
+/* 공통값: 패딩 56, 최소 높이 191, 제목 36px */
+.home .hero {
+  min-height: 0;
+  padding: 36px 56px;
+  gap: 12px;
+}
+.home .hero__title {
+  font-size: 30px;
+}
+/* 로고 이미지를 Hero 세로 가운데에 두고 조금 작게 - 원본 364 × 133 */
+.home .hero__image {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: auto;
+}
+
+/* ---------- 기능 카드 2개 ---------- */
+/* 카드 두 개 높이를 같도록 하기. */
+.home-cards {
+  align-items: stretch;
+}
+
+/* 공통값: 최소 높이 403, 아이콘 영역 106, 설명 24px */
+.home .feature-card--lg {
+  min-height: 0;
+}
+.home .feature-card--lg .feature-card__icon {
+  height: 64px;
+}
+.home .feature-card--lg .feature-card__icon img {
+  width: 56px;
+  height: 56px;
+}
+.home .feature-card--lg .feature-card__title {
+  font-size: 26px;
+}
+.home .feature-card--lg .feature-card__desc {
+  font-size: 18px;
+  line-height: 1.5;
+}
+/* 버튼과 설명 사이 최소 간격 */
+.home .feature-card--lg .feature-card__actions {
+  padding-top: 12px;
+}

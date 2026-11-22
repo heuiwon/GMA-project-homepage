@@ -13,17 +13,60 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: study) -->
   <header id="header" data-active="study"></header>
 
-  <main id="main">
+  <main class="page" id="main">
     <!-- PAGE 6. 학업에 활용하기 — 목록 -->
-    <nav class="breadcrumb">홈 &gt; 학업에 활용하기</nav>
-    <h1>학업에 AI를 활용해 볼까요?</h1>
-    <p>상황을 골라 AI 활용 방법과 예시 프롬프트를 확인하세요.</p>
+
+    <div class="page-title">
+      <nav class="page-title__path">홈 &gt; 학업에 활용하기</nav>
+      <h1 class="page-title__heading">학업에 AI를 활용해 볼까요?</h1>
+      <p class="page-title__desc">상황을 골라 AI 활용 방법과 예시 프롬프트를 확인하세요.</p>
+    </div>
 
     <!-- 분야 카드 3개(페이지 전용): 글쓰기 / 수학 문제 풀이 / 강의 이해 -->
-    <section class="study-cards" id="study-cards"></section>
+
+    <section class="study-cards" id="study-cards">
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <img src="/images/icons/note-pencil.png" alt ="note-pencil" width = "48" height = "48">
+          </div>
+          <h2 class="feature-card__title">학술적 글쓰기</h2>
+          <p class="feature-card__desc">글쓰기 과정에서 AI를 보조도구로 사용하기</p>
+          <div class="feature-card__actions" id="writing-button"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <img src="/images/icons/math.png" alt ="math" width = "56" height = "56">
+          </div>
+          <h2 class="feature-card__title">수학 문제 풀이</h2>
+          <p class="feature-card__desc">어려운 수학 문제를 AI와 함께 분석하기</p>
+          <div class="feature-card__actions" id="math-button"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <img src="/images/icons/quiz.png" alt ="lecture" width = "56" height = "56">
+          </div>
+          <h2 class="feature-card__title">강의 분석 및 퀴즈 생성</h2>
+          <p class="feature-card__desc">강의를 이해하고 퀴즈 생성하기</p>
+          <div class="feature-card__actions" id="lecture-button"></div>
+        </div>
+
+      </div>
+
+    </section>
+    
 
     <!-- 윤리 지침 안내 (Box 연한 배경) -->
-    <section class="ethics-notice" id="ethics-notice"></section>
+    <section class="ethics-notice" id="ethics-notice">
+      <div class="notice-banner">
+        <img src="/images/icons/warning.png" class="notice-banner__icon" alt="ethics-warning" width="36" height="36">
+        <p class="notice-banner__text">AI가 만든 결과물은 그대로 제출하지 말고, 내 관점과 표현으로 직접 검토해주세요. </p>
+        <div id="ethics-warning-button"></div>
+      </div>
+    </section>
+
   </main>
 
   <!-- 공통 컴포넌트: Footer -->
