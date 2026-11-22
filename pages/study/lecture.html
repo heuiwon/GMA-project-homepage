@@ -13,25 +13,102 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: study) -->
   <header id="header" data-active="study"></header>
 
-  <main id="main">
+  <main id="main" class="study-detail">
     <!-- PAGE 7. 학업에 활용하기 — 상세: 강의 이해 (강의자료 학습 + 퀴즈 만들기) -->
-    <nav class="breadcrumb">학업에 활용하기 &gt; 강의 이해</nav>
+    <nav class="breadcrumb"><a href="./index.html">학업에 활용하기</a> &gt; 강의 이해</nav>
     <h1>강의 이해</h1>
 
-    <!-- 1. 활용 상황 설명 (Box 기본) -->
-    <section class="study-section" id="situation">
+    <section class="study-section box box--default" id="situation">
       <h2>활용 상황 설명</h2>
+      <p>대학 수업에서 이해하기 어려웠거나 더 알아보고 싶은 부분이 있을 때 AI를 활용해 보세요. 아래 두 프롬프트를 복사한 뒤 과목, 학습 수준, 목표, 출제 범위를 자신에게 맞게 바꿔 쓸 수 있어요.</p>
     </section>
 
-    <!-- 2. 활용 방법: Step별 방법 + 예시 프롬프트(Box 연한 배경 + 복사하기 Button primary)
-            + 주의사항 및 검증 방법 -->
-    <section class="study-section" id="how-to">
+    <section class="study-section box box--default" id="how-to">
       <h2>활용 방법</h2>
+      <ol class="study-steps">
+        <li>공유할 수 있는 강의자료(PDF, 필기 등)를 업로드합니다.</li>
+        <li>자신의 학습 수준과 목표를 프롬프트에 포함합니다.</li>
+        <li><strong>이해되지 않는 개념을 단계별로 설명해 달라고 요청합니다.</strong>
+          <h3>[5-1] 강의 이해 프롬프트</h3>
+          <div class="prompt-box">
+            <p class="prompt-box__text">너는 대학생을 가르치는 전문 튜터야.
+첨부한 강의자료를 바탕으로 내용을 설명해 줘.
+
+[학습 정보]
+- 학습 수준: 대학교 2학년
+- 과목: 컴퓨터구조
+- 학습 목표: CPU 데이터패스 이해
+
+[요청사항]
+1. 강의자료의 순서대로 설명해 줘.
+2. 어려운 개념은 쉬운 예시를 들어 설명해 줘.
+3. 중요한 용어는 영어와 한국어를 함께 표시해 줘.
+4. 강의자료에 없는 내용은 별도로 구분해 줘.
+5. 마지막에 핵심 개념을 정리해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+        <li><strong>학습한 범위에서 복습 퀴즈를 출제해 달라고 요청합니다.</strong>
+          <h3>[5-2] 퀴즈 생성 프롬프트</h3>
+          <div class="prompt-box">
+            <p class="prompt-box__text">첨부한 강의자료를 기반으로 복습 퀴즈를 만들어 줘.
+
+[조건]
+- 난이도: 대학교 2학년
+- 문제 수: 10문제
+- 유형: 객관식 5문제, 단답형 5문제
+- 출제 범위: 강의자료 10~25페이지
+
+[진행 방식]
+1. 문제를 한 개씩 출제해 줘.
+2. 내가 답변하기 전까지 정답을 공개하지 마.
+3. 답변 후 정답과 해설을 제공해 줘.
+4. 틀린 문제와 관련된 개념을 다시 설명해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+        <li>틀린 문제를 분석하고 관련 개념을 다시 공부합니다.</li>
+      </ol>
+
+      <p><strong>검증 방법</strong> AI의 설명과 퀴즈 정답을 원본 강의자료와 대조하세요.</p>
     </section>
 
-    <!-- 3. 추천 AI 도구: 추천 AI 카드(Box 기본 + 바로가기 Button small) -->
     <section class="study-section" id="ai-tools">
       <h2>추천 AI 도구</h2>
+      <ul class="study-tools">
+        <li class="box box--default study-tool">
+          <img src="/images/icons/chatgpt.png" alt="" width="32" height="32">
+          <div>
+            <h3>ChatGPT (Study Mode)</h3>
+            <p>단계별 개념 설명과 이해도 점검</p>
+          </div>
+          <a class="btn btn--small" href="https://chatgpt.com/studymode" aria-label="ChatGPT (Study Mode) 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="box box--default study-tool">
+          <div>
+            <h3>NotebookLM</h3>
+            <p>강의 PDF 요약과 복습 퀴즈 만들기</p>
+          </div>
+          <a class="btn btn--small" href="https://notebooklm.google.com/" aria-label="NotebookLM 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="box box--default study-tool">
+          <img src="/images/icons/claude.png" alt="" width="32" height="32">
+          <div>
+            <h3>Claude</h3>
+            <p>긴 강의자료의 핵심 개념과 연결 관계 정리</p>
+          </div>
+          <a class="btn btn--small" href="https://claude.ai/" aria-label="Claude 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="box box--default study-tool">
+          <img src="/images/icons/gemini.png" alt="" width="32" height="32">
+          <div>
+            <h3>Gemini (Guided Learning)</h3>
+            <p>시각자료와 함께 단계별로 개념 학습</p>
+          </div>
+          <a class="btn btn--small" href="https://gemini.google.com/" aria-label="Gemini (Guided Learning) 바로가기">바로가기 ↗</a>
+        </li>
+      </ul>
+      <p><a class="study-help-link" href="https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt">ChatGPT 학습 모드 사용법</a></p>
     </section>
   </main>
 
