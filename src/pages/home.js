@@ -1,8 +1,4 @@
-// PAGE 1. Home
-// TODO: 기능 카드 2개(AI 단계학습 / 학업에 활용하기) 그리기
+import "../common.js";
 
-import { renderHeader } from "../components/header.js";
-import { renderFooter } from "../components/footer.js";
-
-renderHeader();
-renderFooter();
+// 헤더 · 푸터는 common.js가 그림
+// Hero와 기능 카드 2개는 index.html에 HTML 클래스로 바로 작성 (JS로 그리지 않음!)
