@@ -3,6 +3,48 @@
 
 import { renderHeader } from "../components/header.js";
 import { renderFooter } from "../components/footer.js";
+import { createButton } from "../components/button.js";
 
 renderHeader();
 renderFooter();
+
+const writingButtonArea = document.querySelector("#writing-button");
+
+const writingButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "writing.html"
+});
+
+writingButtonArea.appendChild(writingButton);
+
+const mathButtonArea = document.querySelector("#math-button");
+
+const mathButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "math.html"
+});
+
+mathButtonArea.appendChild(mathButton);
+
+const lectureButtonArea = document.querySelector("#lecture-button");
+
+const lectureButton = createButton({
+    label: "바로가기",
+    variant: "outline",
+    href: "lecture.html"
+});
+
+lectureButtonArea.appendChild(lectureButton);
+
+const ethicsWarningButtonArea = document.querySelector("#ethics-warning-button");
+
+const ethicsWarningButton = createButton({
+    label: "윤리 지침 다시보기",
+    variant: "text",
+    href: "onboarding.html"
+    //onclick?
+});
+
+ethicsWarningButtonArea.appendChild(ethicsWarningButton);

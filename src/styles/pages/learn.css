@@ -1,64 +1,107 @@
 /* PAGE 3. AI 단계학습 목록 */
-#main:has(.learn-layout) {
-  width: min(var(--content-width), calc(100% - 48px));
-  margin: 0 auto;
-  padding: 40px 0 72px;
+.learn .page {
+  --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
+  gap: 12px;
+  padding-top: 40px;
+  padding-bottom: 72px;
 }
-#main:has(.learn-layout) > .breadcrumb {
-  margin-bottom: 16px;
-  font-size: var(--fs-14);
+
+.learn-section {
+  margin-top: 16px;
+}
+
+.learn-section__heading {
+  margin: 0 0 8px;
+  font-size: var(--fs-20);
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.learn-section__desc {
+  margin: 0;
+  font-size: var(--fs-15);
   color: var(--color-body);
 }
-#main:has(.learn-layout) > h1 {
-  margin: 0 0 8px;
-  color: var(--color-heading);
-  font-size: var(--fs-32);
-}
-#main:has(.learn-layout) > p {
-  margin: 0 0 32px;
-  font-size: var(--fs-17);
-}
+
 .learn-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   align-items: start;
   gap: 32px;
+  margin-top: 20px;
 }
+
 .step-item__card {
   box-sizing: border-box;
 }
+
 .step-item__text > .tag {
   align-self: flex-start;
   margin-top: 4px;
 }
+
 .step-item__card > .btn {
   text-decoration: none;
 }
+
 .progress-card {
   box-sizing: border-box;
   width: auto;
   position: sticky;
   top: 24px;
 }
+
 .progress-card__count {
   margin: 0;
 }
+
 .progress-card > .btn {
   align-self: stretch;
   text-decoration: none;
 }
+
 @media (max-width: 800px) {
-  .learn-layout { grid-template-columns: 1fr; gap: 24px; }
-  .progress-card { position: static; }
+  .learn-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .progress-card {
+    position: static;
+  }
 }
+
 @media (max-width: 560px) {
-  #main:has(.learn-layout) { width: calc(100% - 32px); padding: 28px 0 48px; }
-  #main:has(.learn-layout) > h1 { font-size: 26px; }
-  #main:has(.learn-layout) > p { font-size: var(--fs-15); }
-  .step-item { gap: 12px; }
-  .step-item__number { width: 36px; height: 36px; }
-  .step-item__card { align-items: flex-start; flex-wrap: wrap; gap: 12px; padding: 16px; }
-  .step-item--current .step-item__card { padding: 15px; }
-  .step-item__card > .btn { margin-left: auto; }
-  .step-item__title { font-size: var(--fs-17); }
+  .learn .page {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .step-item {
+    gap: 12px;
+  }
+
+  .step-item__number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .step-item__card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .step-item--current .step-item__card {
+    padding: 15px;
+  }
+
+  .step-item__card > .btn {
+    margin-left: auto;
+  }
+
+  .step-item__title {
+    font-size: var(--fs-17);
+  }
 }

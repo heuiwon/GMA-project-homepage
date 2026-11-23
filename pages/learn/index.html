@@ -9,21 +9,110 @@
     <link rel="stylesheet" href="/src/styles/components.css" />
     <link rel="stylesheet" href="/src/styles/pages/learn.css" />
   </head>
-  <body>
+  <body class="learn">
     <!-- 공통 컴포넌트: Header (현재 메뉴: learn) -->
     <header id="header" data-active="learn"></header>
 
-    <main id="main">
-      <!-- PAGE 3. AI 단계학습 — 목록 -->
-      <nav class="breadcrumb">홈 &gt; 단계별 학습</nav>
-      <h1>무엇을 학습할까요?</h1>
-      <p>관심 있는 주제나 지금 필요한 기능을 자유롭게 골라 보세요.</p>
+    <main id="main" class="page">
+      <div class="page-title">
+        <nav class="page-title__path" aria-label="현재 위치">
+          <a href="/index.html">홈</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">단계별 학습</span>
+        </nav>
+        <h1 class="page-title__heading">무엇을 학습할까요?</h1>
+        <p class="page-title__desc">관심 있는 주제나 지금 필요한 기능을 자유롭게 골라 보세요.</p>
+      </div>
+
+      <div>
+        <h2 class="page-title__heading" style="font-size:var(--fs-24)">단계별 학습</h2>
+        <p class="page-title__desc"> 1단계부터 순서대로 학습하는 것을 권장해요. 필요한 단계를 바로 고를 수도 있어요.</p>
+      </div>
+
 
       <div class="learn-layout">
         <!-- 단계 목록: 단계 항목(페이지 전용) + Tag + Button -->
-        <ol class="step-list" id="step-list"></ol>
+        <ol class="step-list" id="step-list">
+          <!-- Step 1: 완료-->
+          <li class="step-item step-item--done">
+            <span class="step-item__number">1</span>
+            <div class="step-item__card">
+              <div class="step-item__text">
+                <span class="step-item__label">Step1</span>
+                <h3 class="step-item__title">AI 기본 개념 이해</h3>
+                <p class="step-item__desc">AI란 무엇인가? | 생성형 AI와 LLM의 개념 | 기본 용어 이해 등</p>
+              </div>
+              <span class="tag tag--done">학습 완료</span>
+              <a href="./step1.html" class="btn btn--outline">다시 보기 →</a>
+            </div>
+          </li>
+
+          <!-- Step 2: 진행 중-->
+          <li class="step-item step-item--current">
+            <span class="step-item__number">2</span>
+            <div class="step-item__card">
+              <div class="step-item__text">
+                <span class="step-item__label">Step2</span>
+                <h3 class="step-item__title">AI 사용 방법</h3>
+                <p class="step-item__desc">대표 AI 서비스 소개 | 회원가입 및 기본 인터페이스 사용법 등</p>
+              </div>
+              <span class="tag tag--current">● 진행 중</span>
+              <a href="./step2.html" class="btn btn--primary">이어서 학습하기 →</a>
+            </div>
+          </li>
+
+          <!-- Step 3: 학습 전 -->
+          <li class="step-item">
+            <span class="step-item__number">3</span>
+            <div class="step-item__card">
+              <div class="step-item__text">
+                <span class="step-item__label">Step3</span>
+                <h3 class="step-item__title">프롬프트 기초</h3>
+                <p class="step-item__desc">프롬프트란 무엇인가? | 좋은 프롬프트 작성 원칙 | 프롬프트 작성 실습 등</p>
+              </div>
+              <span class="tag">✓ 학습 전</span>
+              <a href="./step3.html" class="btn btn--outline">학습하기 →</a>
+            </div>
+          </li>
+
+          <!-- Step 4: 학습 전 -->
+          <li class="step-item">
+            <span class="step-item__number">4</span>
+            <div class="step-item__card">
+              <div class="step-item__text">
+                <span class="step-item__label">Step4</span>
+                <h3 class="step-item__title">AI 결과 검증 및 평가</h3>
+                <p class="step-item__desc">AI 할루시네이션이란? | AI가 잘못된 정보를 생성하는 이유 등</p>
+              </div>
+              <span class="tag">✓ 학습 전</span>
+              <a href="./step4.html" class="btn btn--outline">학습하기 →</a>
+            </div>
+          </li>
+
+          <!-- Step 5: 학습 전 -->
+          <li class="step-item">
+            <span class="step-item__number">5</span>
+            <div class="step-item__card">
+              <div class="step-item__text">
+                <span class="step-item__label">Step5</span>
+                <h3 class="step-item__title">AI 심화 기능 활용</h3>
+                <p class="step-item__desc">파일 분석 및 데이터 처리 | 이미지 및 콘텐츠 생성 | 웹 검색 연동 등</p>
+              </div>
+              <span class="tag">✓ 학습 전</span>
+              <a href="./step5.html" class="btn btn--outline">학습하기 →</a>
+            </div>
+          </li>
+        </ol>
+
         <!-- 내 진행률 카드(페이지 전용, Box 기본 사용) -->
-        <aside class="progress-card" id="progress-card"></aside>
+        <aside class="progress-card" id="progress-card">
+          <h2 class="progress-card__title">내 진행률</h2>
+          <div class="progress-card__bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-card__fill" style="width: 20%;"></div>
+          </div>
+          <p class="progress-card__count">1 / 5 완료</p>
+          <a href="./step2.html" class="btn btn--primary">이어서 학습하기</a>
+        </aside>
       </div>
     </main>
 
