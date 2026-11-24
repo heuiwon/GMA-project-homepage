@@ -1,4 +1,23 @@
 // PAGE 3-1 ~ 3-5. Step 상세 공통 스크립트
-// TODO: 학습 완료 처리, 다음 단계로 이동
 import "../common.js";
-import { setStepStatus } from "../utils/progress.js";
+import { getProgress, setStepStatus } from "../utils/progress.js";
+
+const completeButton = document.querySelector("[data-complete-step]");
+
+if (completeButton) {
+  const step = completeButton.dataset.completeStep;
+
+  function showCompleted() {
+    completeButton.textContent = "✓ 학습 완료";
+    completeButton.disabled = true;
+  }
+
+  if (getProgress()[step] === "done") {
+    showCompleted();
+  }
+
+  completeButton.addEventListener("click", () => {
+    setStepStatus(step, "done");
+    showCompleted();
+  });
+}

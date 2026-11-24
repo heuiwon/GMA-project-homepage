@@ -84,28 +84,6 @@
   background: var(--color-bg-sub);
 }
 
-.step3-practice {
-  flex: 1;
-  min-width: 0;
-  color: var(--color-body);
-  font-size: var(--fs-17);
-  overflow-wrap: anywhere;
-}
-
-.step3-practice__input {
-  min-height: 1.6em;
-  cursor: text;
-}
-
-.step3-practice__input:empty::before {
-  content: "내용 입력";
-}
-
-.step3-practice__input:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
-}
-
 @media (max-width: 600px) {
   .step3 .header {
     padding-inline: 16px;
