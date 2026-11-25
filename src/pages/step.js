@@ -8,6 +8,7 @@ if (completeButton) {
   const step = completeButton.dataset.completeStep;
 
   function showCompleted() {
+    completeButton.classList.replace("btn--primary", "btn--outline");
     completeButton.textContent = "✓ 학습 완료";
     completeButton.disabled = true;
   }
