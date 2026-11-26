@@ -12,7 +12,7 @@
   }
 
 .learn .page-title__path {
-  font-size: 14px;
+  font-size: var(--fs-14);
 }
 
 .learn .page-title__heading {
@@ -20,7 +20,7 @@
 }
 
 .learn .page-title__desc {
-  font-size: 15px;
+  font-size: var(--fs-15);
 }
 
 /* 단계별 학습 섹션 소제목 */
@@ -31,14 +31,14 @@
 .learn-section__heading {
   margin: 0 0 4px;
   color: var(--color-heading);
-  font-size: 22px;
+  font-size: var(--fs-22);
   font-weight: 700;
 }
 
 .learn-section__desc {
   margin: 0;
   color: var(--color-body);
-  font-size: 15px;
+  font-size: var(--fs-15);
 }
 
 /* 메인 그리드 (왼쪽 단계 목록 + 오른쪽 진행률) */
@@ -66,7 +66,7 @@
   z-index: 1;
   width: 44px;
   height: 44px;
-  font-size: 17px;
+  font-size: var(--fs-17);
 }
 
 /* 원형 번호 아래로 내려가는 기본 세로선 (연한 회색) */
@@ -102,15 +102,15 @@
 }
 
 .step-item__label {
-  font-size: 13px;
+  font-size: var(--fs-13);
 }
 
 .step-item__title {
-  font-size: 19px;
+  font-size: var(--fs-19);
 }
 
 .step-item__desc {
-  font-size: 14px;
+  font-size: var(--fs-14);
   line-height: 1.4;
 }
 
@@ -146,12 +146,12 @@
 }
 
 .progress-card__title {
-  font-size: 22px;
+  font-size: var(--fs-22);
 }
 
 .progress-card__count {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--fs-14);
 }
 
 .progress-card__bar {
@@ -203,7 +203,7 @@
   }
 
   .learn .page-title__desc {
-    font-size: 15px;
+    font-size: var(--fs-15);
   }
 
   .learn-section {
