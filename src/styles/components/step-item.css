@@ -35,7 +35,7 @@
   border: 2px solid var(--color-border);
   border-radius: var(--radius-full);
   background: var(--color-bg);
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--color-body);
 }
@@ -88,7 +88,7 @@
   border-color: var(--color-accent);
   background: var(--color-accent);
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .step-item--done .step-item__line {
   background: var(--color-accent);

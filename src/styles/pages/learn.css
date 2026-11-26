@@ -1,22 +1,26 @@
 /* PAGE 3. AI 단계학습 목록 */
 /* 페이지 전체 레이아웃 및 상단 타이틀 */
 .learn .page {
-  --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
+  --page-padding-x: clamp(
+    16px,
+    calc((100vw - var(--content-width)) / 2),
+    120px
+  );
   gap: 16px;
   padding-top: 20px;
   padding-bottom: 24px;
 }
 
 .learn .page-title {
-    gap: 6px;
-  }
+  gap: 6px;
+}
 
 .learn .page-title__path {
   font-size: var(--fs-14);
 }
 
 .learn .page-title__heading {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .learn .page-title__desc {
@@ -74,7 +78,7 @@
   content: "";
   position: absolute;
   left: 21px; /* 원형 너비 44px의 정중앙 (22px - 선 두께 절반 1px) */
-  top: 48px;  /* 원형 번호(44px) 바로 아래 4px 띄움 */
+  top: 48px; /* 원형 번호(44px) 바로 아래 4px 띄움 */
   bottom: 4px; /* 다음 원형 번호 위 4px 띄움 */
   width: 2px;
   border-radius: 999px;
@@ -130,9 +134,9 @@
 }
 
 .learn .tag--current {
-    border-color: var(--color-border);
-    background: var(--color-border);
-    color: var(--color-primary);
+  border-color: var(--color-border);
+  background: var(--color-border);
+  color: var(--color-primary);
 }
 
 /* 진행률 */
@@ -199,7 +203,7 @@
   }
 
   .learn .page-title__heading {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
 
   .learn .page-title__desc {
