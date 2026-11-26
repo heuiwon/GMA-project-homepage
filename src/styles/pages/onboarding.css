@@ -1,1 +1,22 @@
-/* PAGE 0. 온보딩 전용 스타일 */
+/* PAGE 0. 온보딩 전용 스타일
+   카드 · 점 기본 스타일은 공통 파일(styles/components/onboarding.css)에 있고,
+   여기서는 피그마 화면과 다른 부분만 덮어씀 */
+
+/* 카드가 화면 높이만큼 늘어나지 않고 위쪽(여백 80px)에 붙도록 */
+.onboarding {
+  align-items: flex-start;
+}
+
+/* 페이지 점: 버튼 기본 안쪽 여백을 없애야 10px 크기가 유지됨 */
+.page-dots__dot {
+  padding: 0;
+}
+
+/* 윤리 지침: 피그마는 항목 사이 간격 없이 줄만 이어짐 */
+.onboarding-card__rules {
+  gap: 0;
+}
+.onboarding-card__rule-divider {
+  margin: 0 8px;
+  opacity: 0.4;
+}

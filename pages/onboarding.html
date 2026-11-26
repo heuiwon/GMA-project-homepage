@@ -3,24 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>사용방법 | AIMaster</title>
+  <title>온보딩 | AIMaster</title>
   <link rel="stylesheet" href="/src/styles/reset.css" />
   <link rel="stylesheet" href="/src/styles/variables.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
   <link rel="stylesheet" href="/src/styles/pages/onboarding.css" />
 </head>
 <body>
-  <!-- 공통 컴포넌트: Header (현재 메뉴: home) -->
-  <header id="header" data-active="home"></header>
+  <!-- 공통 컴포넌트: Header (온보딩은 현재 메뉴가 없으므로 data-active 생략) -->
+  <header id="header"></header>
 
-  <main id="main">
-    <!-- PAGE 0. 온보딩 — 사용방법 슬라이드 + AI 윤리 지침 -->
-    <section class="onboarding-card" id="onboarding">
-      <!-- 상단: "사용방법 n / N" + 건너뛰기 버튼(Button small) -->
-      <!-- 안내 이미지 / 제목 / 설명 -->
-      <!-- 하단: 페이지 표시(점) + 다음 버튼(Button primary) -->
-    </section>
-  </main>
+  <!-- PAGE 0. 온보딩 — 카드 4장은 src/pages/onboarding.js 가 그림 -->
+  <main class="onboarding" id="main"></main>
 
   <!-- 공통 컴포넌트: Footer -->
   <footer id="footer"></footer>

@@ -1,1 +1,236 @@
-/* PAGE 3. 단계학습 목록 전용 스타일 */
+/* PAGE 3. AI 단계학습 목록 */
+/* 페이지 전체 레이아웃 및 상단 타이틀 */
+.learn .page {
+  --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
+.learn .page-title {
+    gap: 6px;
+  }
+
+.learn .page-title__path {
+  font-size: var(--fs-14);
+}
+
+.learn .page-title__heading {
+  font-size: 30px;
+}
+
+.learn .page-title__desc {
+  font-size: var(--fs-15);
+}
+
+/* 단계별 학습 섹션 소제목 */
+.learn-section {
+  margin-top: 0;
+}
+
+.learn-section__heading {
+  margin: 0 0 4px;
+  color: var(--color-heading);
+  font-size: var(--fs-22);
+  font-weight: 700;
+}
+
+.learn-section__desc {
+  margin: 0;
+  color: var(--color-body);
+  font-size: var(--fs-15);
+}
+
+/* 메인 그리드 (왼쪽 단계 목록 + 오른쪽 진행률) */
+.learn-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 32px;
+  margin-top: 0;
+}
+
+/* 단계 목록 번호 */
+.step-list {
+  gap: 0;
+}
+
+.step-item {
+  position: relative;
+  gap: 16px;
+  padding-bottom: 8px; /* 세로 선 보이도록 간격 조정할 것 */
+}
+
+.step-item__number {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  font-size: var(--fs-17);
+}
+
+/* 원형 번호 아래로 내려가는 기본 세로선 (연한 회색) */
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 21px; /* 원형 너비 44px의 정중앙 (22px - 선 두께 절반 1px) */
+  top: 48px;  /* 원형 번호(44px) 바로 아래 4px 띄움 */
+  bottom: 4px; /* 다음 원형 번호 위 4px 띄움 */
+  width: 2px;
+  border-radius: 999px;
+  background: var(--color-border);
+}
+
+/* 학습 완료(.step-item--done) 단계는 세로선도 보라색으로 채움 */
+.step-item--done:not(:last-child)::after {
+  background: var(--color-accent);
+}
+
+/* 단계 목록 카드 */
+.step-item__card {
+  box-sizing: border-box;
+  gap: 16px;
+  padding: 12px 20px;
+}
+
+.step-item--current .step-item__card {
+  padding: 11px 19px;
+}
+
+.step-item__text {
+  gap: 4px;
+}
+
+.step-item__label {
+  font-size: var(--fs-13);
+}
+
+.step-item__title {
+  font-size: var(--fs-19);
+}
+
+.step-item__desc {
+  font-size: var(--fs-14);
+  line-height: 1.4;
+}
+
+.step-item__card > .btn {
+  text-decoration: none;
+}
+
+/* 진행 색상 커스텀 */
+.learn .tag--done {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.learn .tag--done::before {
+  display: none;
+}
+
+.learn .tag--current {
+    border-color: var(--color-border);
+    background: var(--color-border);
+    color: var(--color-primary);
+}
+
+/* 진행률 */
+.progress-card {
+  position: sticky;
+  top: 16px;
+  box-sizing: border-box;
+  width: auto;
+  gap: 16px;
+  padding: 24px;
+}
+
+.progress-card__title {
+  font-size: var(--fs-22);
+}
+
+.progress-card__count {
+  margin: 0;
+  font-size: var(--fs-14);
+}
+
+.progress-card__bar {
+  width: 100%;
+  height: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg-sub);
+}
+
+.progress-card__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary-active);
+}
+
+.learn .tag--current {
+  border-color: var(--color-border);
+  background: var(--color-border);
+  color: var(--color-primary);
+}
+
+.progress-card > .btn {
+  align-self: stretch;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .learn-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .progress-card {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .learn .page {
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .learn .page-title__heading {
+    font-size: 26px;
+  }
+
+  .learn .page-title__desc {
+    font-size: var(--fs-15);
+  }
+
+  .learn-section {
+    margin-top: 16px;
+  }
+
+  .learn-layout {
+    margin-top: 12px;
+    gap: 16px;
+  }
+
+  .step-item {
+    gap: 10px;
+  }
+
+  .step-item__card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .step-item--current .step-item__card {
+    padding: 11px 15px;
+  }
+
+  .step-item__text {
+    flex-basis: 100%;
+  }
+}
