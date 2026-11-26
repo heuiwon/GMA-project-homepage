@@ -118,22 +118,7 @@
   text-decoration: none;
 }
 
-/* 진행 색상 커스텀 */
-.learn .tag--done {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
-  color: #ffffff;
-}
 
-.learn .tag--done::before {
-  display: none;
-}
-
-.learn .tag--current {
-    border-color: var(--color-border);
-    background: var(--color-border);
-    color: var(--color-primary);
-}
 
 /* 진행률 */
 .progress-card {
