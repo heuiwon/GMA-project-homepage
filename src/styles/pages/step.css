@@ -1,3 +1,47 @@
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 0px;
+}
+
+/* Step 상세 페이지 */
+.step1 .page {
+  --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
+  padding-bottom: 60px;
+}
+
+.step1-services {
+  margin-block: 8px 16px;
+  padding-inline-start: 1.5em;
+  list-style: none;
+}
+
+.step2 .page {
+  --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
+  padding-bottom: 60px;
+}
+
+.step2-services {
+  margin-block: 8px 16px;
+  padding-inline-start: 1.5em;
+  list-style: disc;
+}
+
+.step2-services li + li {
+  margin-top: 8px;
+}
+
+.step2-steps {
+  margin-block: 8px 16px;
+  padding-inline-start: 1.5em;
+  list-style: decimal;
+}
+
+.step2-steps li + li {
+  margin-top: 20px;
+}
+
 /* Step 3 상세 페이지 */
 .step3 .page {
   --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
@@ -6,6 +50,51 @@
 
 .step3 .page-title__desc {
   min-height: 34px;
+}
+
+.step3-toc {
+  position: fixed;
+  z-index: 2;
+  inset-block-start: calc(var(--header-height) + 12px);
+  inset-inline-end: 16px;
+  max-width: min(240px, calc(100% - 32px));
+  max-height: calc(100dvh - var(--header-height) - 24px);
+  overflow: auto;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+  background: var(--color-bg);
+}
+
+#step3-toc-title {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.step3-toc .toc-list {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.step3-toc .toc-link {
+  display: block;
+  padding: 4px 8px;
+  border-radius: var(--radius-8);
+}
+
+.step3-toc .toc-link:hover,
+.step3-toc .toc-link:focus-visible,
+.step3-toc .is-active-link {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+@media (min-width: 960px) {
+  .step3 .page {
+    width: calc(100% - 256px);
+    margin-inline-end: 256px;
+  }
 }
 
 .step3 .step3-section--text {
@@ -82,28 +171,6 @@
 .step3-comparison th {
   color: var(--color-heading);
   background: var(--color-bg-sub);
-}
-
-.step3-practice {
-  flex: 1;
-  min-width: 0;
-  color: var(--color-body);
-  font-size: var(--fs-17);
-  overflow-wrap: anywhere;
-}
-
-.step3-practice__input {
-  min-height: 1.6em;
-  cursor: text;
-}
-
-.step3-practice__input:empty::before {
-  content: "내용 입력";
-}
-
-.step3-practice__input:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
 }
 
 @media (max-width: 600px) {

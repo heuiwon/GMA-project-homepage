@@ -23,8 +23,13 @@
       <p class="page-title__desc">AI와 더 효과적으로 소통하는 방법을 배우고, 원하는 답변을 얻기 위한 프롬프트 작성법을 익혀 봐요.</p>
     </div>
 
+    <nav class="step3-toc" aria-labelledby="step3-toc-title">
+      <p id="step3-toc-title">목차</p>
+      <div id="step3-toc"></div>
+    </nav>
+
     <section class="content-section step3-section--text">
-      <h2 class="content-section__heading">① 프롬프트란 무엇인가?</h2>
+      <h2 class="content-section__heading" id="prompt-basics">① 프롬프트란 무엇인가?</h2>
       <div class="content-section__body step3-lesson">
         <p>우리가 AI에게 질문하거나 작업을 요청할 때 입력하는 내용을 <strong>프롬프트(Prompt)</strong> 라고 해요.</p>
         <p>프롬프트는 AI가 어떤 작업을 수행해야 하는지 알려주는 역할을 해요.</p>
@@ -64,7 +69,7 @@
     </section>
 
     <section class="content-section step3-section--text">
-      <h2 class="content-section__heading">② 좋은 프롬프트 작성 원칙</h2>
+      <h2 class="content-section__heading" id="prompt-principles">② 좋은 프롬프트 작성 원칙</h2>
       <div class="content-section__body step3-lesson">
         <h3>AI에게 원하는 답변을 얻으려면 어떻게 해야 할까요?</h3>
         <p>AI는 다양한 질문에 답하고 여러 작업을 수행할 수 있지만, 우리가 원하는 것을 처음부터 정확하게 알고 있지는 않아요.</p>
@@ -208,7 +213,7 @@
     </section>
 
     <section class="content-section">
-      <h2 class="content-section__heading">③ 프롬프트 엔지니어링</h2>
+      <h2 class="content-section__heading" id="prompt-engineering">③ 프롬프트 엔지니어링</h2>
       <div class="content-section__body step3-lesson">
         <h3>프롬프트 엔지니어링이란 무엇인가요?</h3>
         <p><strong>프롬프트 엔지니어링(Prompt Engineering)</strong> 은 생성형 AI로부터 원하는 결과를 얻기 위해 프롬프트를 설계하고 개선하는 기술이에요.</p>
@@ -322,7 +327,7 @@
     </section>
 
     <section class="content-section">
-      <h2 class="content-section__heading">④ 예시 상황별 프롬프트 작성 및 비교 실습</h2>
+      <h2 class="content-section__heading" id="prompt-practice">④ 예시 상황별 프롬프트 작성 및 비교 실습</h2>
       <div class="content-section__body step3-lesson">
         <h3>04. 상황별 프롬프트 비교 및 실습</h3>
         <p>지금까지 좋은 프롬프트 작성 원칙과 프롬프트 엔지니어링 기법을 배웠어요.</p>
@@ -447,7 +452,6 @@
         <p><strong>아쉬운 프롬프트</strong></p>
         <div class="prompt-box">
           <p class="prompt-box__text">시험 공부할 문제 만들어 줘.</p>
-          <button class="btn btn--primary btn--lg" type="button" data-copy aria-live="polite">복사하기</button>
         </div>
 
         <p><strong>실습 과제</strong></p>
@@ -459,14 +463,6 @@
           <li>정답과 해설을 마지막에 배치하기</li>
           <li>수업 자료를 제공하고 해당 내용만 활용하도록 요청하기</li>
         </ul>
-        <div class="prompt-box">
-          <div class="step3-practice">
-            <p id="practice-1-label">직접 작성해보기</p>
-            <div class="prompt-box__text step3-practice__input" role="textbox" aria-multiline="true"
-                 aria-labelledby="practice-1-label" aria-placeholder="내용 입력" contenteditable="plaintext-only"></div>
-          </div>
-          <button class="btn btn--primary btn--lg" type="button" data-copy aria-live="polite">복사하기</button>
-        </div>
         <p><strong>완성한 프롬프트를 AI에 입력하고, 처음 프롬프트의 결과와 비교해 보세요.</strong></p>
 
         <p><strong>점검 체크리스트</strong></p>
@@ -487,6 +483,7 @@
       </div>
     </section>
     <div class="page-actions">
+      <button class="btn btn--primary" type="button" data-complete-step="3" aria-live="polite">학습 완료</button>
       <a class="btn btn--primary" href="./step4.html">→ Step4 이어서 학습하기</a>
     </div>
   </main>

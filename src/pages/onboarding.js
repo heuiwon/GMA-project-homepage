@@ -13,7 +13,7 @@ const DONE_KEY = "gma-onboarding-done"; // 온보딩을 끝냈는지 저장 (pro
 // 카드 내용 
 const STEPS = [
   {
-    image: "/images/onboarding/guide-(1).png",
+    image: "/images/onboarding/guide-(1).svg",
     alt: "홈 화면의 AI 단계학습, 학업에 활용하기 메뉴 카드 예시",
     title: "홈에서 원하는 학습을 시작해요",
     desc: [
@@ -22,7 +22,7 @@ const STEPS = [
     ],
   },
   {
-    image: "/images/onboarding/guide-(2).png",
+    image: "/images/onboarding/guide-(2).svg",
     alt: "AI 단계별 학습 목록에서 2단계 AI 사용 방법이 진행 중으로 표시된 예시",
     title: "AI를 5단계로 차근차근 배워요",
     desc: [
@@ -31,7 +31,7 @@ const STEPS = [
     ],
   },
   {
-    image: "/images/onboarding/guide-(3).png",
+    image: "/images/onboarding/guide-(3).svg",
     alt: "학업에 활용하기의 분야별 카드와 바로가기 버튼 예시",
     title: "학업에 필요한 AI 활용법을 찾아요",
     desc: [
@@ -40,7 +40,7 @@ const STEPS = [
     ],
   },
   {
-    image: "/images/onboarding/guide-(4).png",
+    image: "/images/onboarding/guide-(4).svg",
     alt: "방패와 체크 표시로 표현한 책임 있는 AI 사용 안내 이미지",
     title: "AI, 책임 있게 함께 사용해요",
     rules: [
