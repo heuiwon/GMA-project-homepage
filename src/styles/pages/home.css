@@ -9,21 +9,45 @@
 }
 
 /* ---------- Hero: 패딩 · 제목 크기 줄이기 ---------- */
-/* 공통값: 패딩 56, 최소 높이 191, 제목 36px */
+/*기본 = 모바일*/
 .home .hero {
   min-height: 0;
-  padding: 36px 56px;
+  padding: 24px 20px;
   gap: 12px;
 }
 .home .hero__title {
-  font-size: 30px;
+  font-size: 24px;
 }
-/* 로고 이미지를 Hero 세로 가운데에 두고 조금 작게 - 원본 364 × 133 */
+/*태플릿 이상 = 원래 값*/
+@media (min-width: 768px) {
+  .home .hero {
+    padding: 36px 56px;
+  }
+  .home .hero__title {
+    font-size: 30px;
+  }
+}
+
+/* 기본 = 모바일, 태플릿 : 이미지를 글자 아래 일반 흐름으로 */
 .home .hero__image {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 300px;
+  position: static;
+  transform: none;
+  width: min(240px, 100%);
   height: auto;
+}
+
+/*데스크톱: 오른쪽으로 띄우고, 글자는 이미지 자리를 피해서*/
+@media (min-width: 1024px) {
+  .home .hero {
+    padding-right: calc(300px + 64px + 24px); /*이미지폭 + 오른쪽 위치 + 여유*/
+  }
+  .home .hero__image {
+    position: absolute;
+    top: 50%;
+    right: 64px;
+    transform: translateY(-50%);
+    width: 300px;
+  }
 }
 
 /* ---------- 기능 카드 2개 ---------- */

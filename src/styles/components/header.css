@@ -5,10 +5,12 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: var(--header-height);
-  padding: 0 var(--bar-padding-x);
+  row-gap: 4px;
+  min-height: var(--header-height);
+  padding: 8px var(--bar-padding-x);
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
@@ -18,17 +20,16 @@
   margin-left: calc(var(--bar-padding-x) * -1);
 }
 .header__logo img {
-  height: 71px;
+  height: 52px;
   width: auto;
 }
 
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 16px;
 }
 
-/* 메뉴 항목: 글자 아래에 28 × 3 밑줄 자리 (현재 메뉴만 색이 보임) */
 .header__link {
   display: flex;
   flex-direction: column;
@@ -37,7 +38,22 @@
   font-size: var(--fs-15);
   font-weight: 400;
   color: var(--color-body);
+  white-space: nowrap; /* "단계별 학습"이 글자 단위로 깨지지 않도록.  */
 }
+@media (min-width: 768px) {
+  .header {
+    flex-wrap: nowrap;
+    height: var(--header-height);
+    padding: 0 var(--bar-padding-x);
+  }
+  .header__logo img {
+    height: 71px;
+  }
+  .header__nav {
+    gap: 40px;
+  }
+}
+
 .header__link::after {
   content: "";
   width: 28px;
