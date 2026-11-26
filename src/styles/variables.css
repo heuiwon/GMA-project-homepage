@@ -40,12 +40,12 @@
     calc((100vw - var(--content-width)) / 2),
     120px
   ); /* 본문 좌우 여백 (1440 - 1200) / 2 */
-  --bar-padding-x: 16px; /* 헤더 · 푸터 좌우 여백 */
+  --bar-padding-x: 1rem; /* 헤더 · 푸터 좌우 여백 */
 }
 
 /* 태플릿부터는 헤더, 푸터 여백은 원래 48px로*/
 @media (min-width: 768px) {
   :root {
-    --bar-padding-x: 48px;
+    --bar-padding-x: 3rem;
   }
 }
