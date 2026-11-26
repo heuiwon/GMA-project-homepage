@@ -1,4 +1,11 @@
-/* Step 2 상세 페이지 */
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 0px;
+}
+
+/* Step 상세 페이지 */
 .step1 .page {
   --page-padding-x: clamp(16px, calc((100vw - var(--content-width)) / 2), 120px);
   padding-bottom: 60px;
