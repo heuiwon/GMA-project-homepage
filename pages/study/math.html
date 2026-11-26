@@ -13,25 +13,147 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: study) -->
   <header id="header" data-active="study"></header>
 
-  <main id="main">
-    <!-- PAGE 7. 학업에 활용하기 — 상세: 수학 문제 풀이 (과제·예제 풀이, 시험 대비, 오답 분석) -->
-    <nav class="breadcrumb">학업에 활용하기 &gt; 수학 문제 풀이</nav>
-    <h1>수학 문제 풀이</h1>
+  <main id="main" class="page page--detail">
+    <div class="page-title">
+      <nav class="page-title__path" aria-label="현재 위치">
+        <a href="./index.html">학업에 활용하기</a> &gt; 수학 문제 풀이
+      </nav>
+      <h1 class="page-title__heading">수학 문제 풀이</h1>
+      <p class="page-title__desc">AI로 풀이 힌트를 얻고, 내 풀이를 점검하고, 비슷한 문제로 연습해 보세요.</p>
+    </div>
 
-    <!-- 1. 활용 상황 설명 (Box 기본) -->
-    <section class="study-section" id="situation">
-      <h2>활용 상황 설명</h2>
+    <section class="content-section" id="situation">
+      <h2 class="content-section__heading">① 활용 상황 설명</h2>
+      <div class="content-section__body">
+        <p>과제나 연습 문제를 풀다가 막혔을 때, 내 풀이가 왜 틀렸는지 모를 때, 정답의 근거가 궁금할 때 AI를 활용할 수 있어요. 시험 전에는 개념을 정리하거나 연습 퀴즈로 이해도를 점검해 보세요.</p>
+        <p>학습 모드에서는 질문이나 단계별 힌트를 받아 풀이를 직접 이어갈 수 있어요. 성적에 반영되는 과제라면 강의계획서나 교수님 공지에서 AI 사용 범위를 먼저 확인하세요.</p>
+      </div>
     </section>
 
-    <!-- 2. 활용 방법: Step별 방법 + 예시 프롬프트(Box 연한 배경 + 복사하기 Button primary)
-            + 주의사항 및 검증 방법 -->
-    <section class="study-section" id="how-to">
-      <h2>활용 방법</h2>
+    <section class="content-section content-section--steps" id="how-to">
+      <h2 class="content-section__heading">② 활용 방법</h2>
+      <ol class="section" role="list">
+        <li class="usage-step">
+          <h3 class="usage-step__heading">1. 학습 모드 켜기</h3>
+          <div class="content-section__body">
+            <p>ChatGPT에서는 입력창에 <code>@study</code>를 입력해 Study를 선택할 수 있어요. Gemini 가이드 학습과 Claude Learning 스킬은 아래 공식 안내에서 켜는 방법을 확인하세요.</p>
+            <p><a class="btn btn--text" href="https://help.openai.com/en/articles/11780217">ChatGPT 안내</a>
+              <a class="btn btn--text" href="https://support.google.com/gemini/answer/16448384?hl=en">Gemini 안내</a>
+              <a class="btn btn--text" href="https://support.claude.com/en/articles/10181068-styles-are-moving-to-skills">Claude 안내</a></p>
+          </div>
+        </li>
+        <li class="usage-step">
+          <h3 class="usage-step__heading">2. 학습 상황을 알려주고 문제 올리기</h3>
+          <p class="content-section__body">학습 수준, 과목과 단원, 목표, 이미 아는 내용, 시험 날짜를 필요한 만큼 알려주세요. 문제 사진을 올렸다면 AI가 숫자와 기호를 정확히 읽었는지 확인하세요.</p>
+        </li>
+        <li class="usage-step">
+          <h3 class="usage-step__heading">3. 첫 단계 힌트 받기</h3>
+          <p class="content-section__body">힌트 하나를 요청하고, 다음 단계는 직접 시도해 보세요.</p>
+          <h4 class="content-section__body">예시 프롬프트 · 힌트 받기</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">나는 대학교 1학년이고 미적분학을 듣고 있어. 사진의 문제(정적분 치환적분)를 풀다가 막혔어.
+답이나 전체 풀이는 아직 알려주지 말고, 첫 단계에서 어떤 걸 생각해야 하는지 힌트만 줘.
+내가 다음 단계를 써서 보내면 맞는지 확인해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+          <h4 class="content-section__body">예시 프롬프트 · 정답의 이유 찾기</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">이 문제의 답이 ②라는 건 알아. 그런데 왜 ②인지 이해가 안 돼.
+답을 반복해서 말하지 말고, 질문을 하나씩 던지면서 내가 스스로 이유를 찾게 도와줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+          <h4 class="content-section__body">예시 프롬프트 · 헷갈리는 개념 이해하기</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">선형대수에서 고유값과 고유벡터 개념이 헷갈려.
+처음엔 아주 쉬운 예시로 설명하고, 내가 이해했다고 하면 조금 더 어려운 예시로 넘어가 줘.
+각 단계가 끝날 때마다 내가 이해했는지 확인하는 질문을 하나씩 해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+        <li class="usage-step">
+          <h3 class="usage-step__heading">4. 내 풀이를 보내고 피드백 받기</h3>
+          <p class="content-section__body">시도한 풀이를 그대로 보내고, 처음으로 틀린 부분과 그 이유를 물어보세요.</p>
+          <h4 class="content-section__body">예시 프롬프트 · 오답 분석</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">아래는 내가 푼 풀이야. 정답은 3인데 나는 5가 나왔어.
+내 풀이에서 처음으로 틀린 줄이 어디인지 찾아주고, 왜 틀렸는지 설명해 줘.
+고친 풀이 전체를 써 주지 말고, 틀린 부분만 짚어 줘.
+
+[내 풀이 붙여넣기]</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+        <li class="usage-step">
+          <h3 class="usage-step__heading">5. 비슷한 문제로 다시 풀어 보기</h3>
+          <p class="content-section__body">시험 범위로 퀴즈를 만들거나, 같은 개념이 쓰이는 새 문제를 받아 스스로 풀어 보세요.</p>
+          <h4 class="content-section__body">예시 프롬프트 · 시험 대비 퀴즈</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">다음 주 화요일에 확률과 통계 중간고사가 있어. 범위는 조건부확률과 베이즈 정리야.
+한 번에 한 문제씩 내 주고, 내가 답하면 채점한 다음 틀린 부분을 설명해 줘.
+쉬운 문제부터 시작해서 점점 어렵게 해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+          <h4 class="content-section__body">예시 프롬프트 · 유사 문제 연습</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">방금 푼 문제와 같은 개념을 쓰는 비슷한 문제를 2개 만들어 줘. 정답은 아직 보여주지 마.
+내가 풀어서 보내면 그때 채점해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+        <li class="usage-step">
+          <h3 class="usage-step__heading">6. 계산과 풀이 검증하기</h3>
+          <p class="content-section__body">AI가 자신 있게 설명해도 틀릴 수 있어요. 방정식의 해를 원래 식에 대입하거나, 부정적분 결과를 미분해 확인하세요. 계산은 그래프나 계산기로 다시 확인하고 풀이의 근거는 교재·강의자료와 대조하세요.</p>
+          <h4 class="content-section__body">예시 프롬프트 · 계산 결과 검증</h4>
+          <div class="prompt-box">
+            <p class="prompt-box__text">방금 풀이의 최종 계산을 코드(데이터 분석 도구)로 다시 계산해서 결과가 같은지 확인해 줘.</p>
+            <button type="button" class="btn btn--primary" data-copy>복사하기</button>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <!-- 3. 추천 AI 도구: 추천 AI 카드(Box 기본 + 바로가기 Button small) -->
-    <section class="study-section" id="ai-tools">
-      <h2>추천 AI 도구</h2>
+    <section class="section" id="ai-tools">
+      <h2 class="section__heading section__heading--lg">추천 AI 도구와 검산 도구</h2>
+      <ul class="grid-2" role="list">
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/chatgpt.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">ChatGPT 학습 모드</h3>
+            <p class="ai-tool-card__desc">힌트, 단계별 풀이 점검, 연습 퀴즈</p>
+          </div>
+          <a class="btn btn--small" href="https://chatgpt.com/studymode" aria-label="ChatGPT 학습 모드 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/gemini.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">Gemini 가이드 학습</h3>
+            <p class="ai-tool-card__desc">시각자료와 단계별 질문으로 개념 이해</p>
+          </div>
+          <a class="btn btn--small" href="https://gemini.google.com/" aria-label="Gemini 가이드 학습 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__logo"><img src="/images/icons/claude.png" alt="" width="32" height="32"></div>
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">Claude Learning</h3>
+            <p class="ai-tool-card__desc">질문을 주고받으며 풀이 과정 정리</p>
+          </div>
+          <a class="btn btn--small" href="https://claude.ai/" aria-label="Claude Learning 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">GeoGebra</h3>
+            <p class="ai-tool-card__desc">그래프로 함수의 교점과 풀이 결과 확인</p>
+          </div>
+          <a class="btn btn--small" href="https://www.geogebra.org/calculator" aria-label="GeoGebra 바로가기">바로가기 ↗</a>
+        </li>
+        <li class="ai-tool-card">
+          <div class="ai-tool-card__text">
+            <h3 class="ai-tool-card__name">Wolfram|Alpha</h3>
+            <p class="ai-tool-card__desc">수식 계산 결과와 풀이 검증</p>
+          </div>
+          <a class="btn btn--small" href="https://www.wolframalpha.com/" aria-label="Wolfram|Alpha 바로가기">바로가기 ↗</a>
+        </li>
+      </ul>
     </section>
   </main>
 
