@@ -13,15 +13,33 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: study) -->
   <header id="header" data-active="study"></header>
 
-  <main id="main">
-    <!-- PAGE 7. 학업에 활용하기 — 상세: 글쓰기 (대학 글쓰기·논문) -->
-    <nav class="breadcrumb">학업에 활용하기 &gt; 글쓰기</nav>
-    <h1>글쓰기</h1>
+  <main class="page" id="main">
+    <!-- PAGE 7. 학업에 활용하기 — 상세: 학술적 글쓰기 (대학 글쓰기·논문) -->
+    <div class="page-title">
+      <nav class="page-title__path" aria-label="현재 위치">
+        <a href="./index.html">학업에 활용하기</a>&gt; 학술적 글쓰기
+      </nav>
+      <h1 class="page-title__heading">학술적 글쓰기</h1>
+      <p class="page-title__desc">~~~</p>
+    </div>
 
     <!-- 1. 활용 상황 설명 (Box 기본) -->
-    <section class="study-section" id="situation">
-      <h2>활용 상황 설명</h2>
+    <section class="content-section content-section--steps" id="how-to">
+      <h2 class="content-section__heading">② 활용 방법</h2>
+      <ol class="section" role="list">
+        <li class="usage-step">
+          <div class="prompt-box prompt-box--fill">
+            <p class="prompt-box__text">나는 대학교 {{학년}}학년이고 {{과목}}을 듣고 있어. 사진의 문제({{문제_유형}})를 풀다가 막혔어.
+답이나 전체 풀이는 아직 알려주지 말고, 첫 단계에서 어떤 걸 생각해야 하는지 힌트만 줘.</p>
+            <button type="button" class="btn btn--primary" data-fill-copy>복사하기</button>
+          </div>
+        </li>
+      </ol>
     </section>
+
+    <!-- <section class="study-section" id="situation">
+      <h2>활용 상황 설명</h2>
+    </section> -->
 
     <!-- 2. 활용 방법: Step별 방법 + 예시 프롬프트(Box 연한 배경 + 복사하기 Button primary)
             + 주의사항 및 검증 방법 -->
