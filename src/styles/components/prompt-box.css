@@ -21,7 +21,8 @@
   white-space: pre-wrap; /* 줄바꿈을 그대로 보여줌 */
 }
 
-.prompt-box > button[data-copy] {
+.prompt-box > button[data-copy],
+.prompt-box > button[data-fill-copy] {
   align-self: flex-end;
 }
 
