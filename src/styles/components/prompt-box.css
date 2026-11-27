@@ -24,3 +24,39 @@
 .prompt-box > button[data-copy] {
   align-self: flex-end;
 }
+
+/*
+빈칸을 채워서 복사하는 프롬프트 박스
+
+박스에 prompt-box--fill 을 붙이면, 문장 속 {{이름}} 이
+입력칸(.prompt-box__input)으로 바뀜
+*/
+
+/* 문장 속 입력칸 */
+.prompt-box__input{
+  width: 6em;
+  field-sizing: content;
+  min-width: 4em;
+
+  margin: 0 4px;
+  padding: 0 8px;
+
+  font: inherit;
+  color: var(--color-heading);
+
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-primary);
+  border-radius: var(--radius-8) var(--radius-8) 0 0;
+}
+
+/*빈칸일 때 보이는 {{이름}}*/
+.prompt-box__input::placeholder {
+  color: #9aa3b2; /* 본문보다 연한 회색 */
+}
+
+/* 입력칸을 클릭(포커스)했을 때 테두리 강조 */
+.prompt-box__input:focus {
+  outline: 2px solid var(--color-primary-active);
+  outline-offset: 1px; /* 테두리와 칸 사이 간격 */
+}
