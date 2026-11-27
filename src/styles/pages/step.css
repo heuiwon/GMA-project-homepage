@@ -52,14 +52,8 @@
   min-height: 34px;
 }
 
+/* 기본 = 모바일·태블릿: 제목 아래 일반 상자로 (본문을 가리지 않게) */
 .step3-toc {
-  position: fixed;
-  z-index: 2;
-  inset-block-start: calc(var(--header-height) + 12px);
-  inset-inline-end: 16px;
-  max-width: min(240px, calc(100% - 32px));
-  max-height: calc(100dvh - var(--header-height) - 24px);
-  overflow: auto;
   padding: 8px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-8);
@@ -94,6 +88,17 @@
   .step3 .page {
     width: calc(100% - 256px);
     margin-inline-end: 256px;
+  }
+
+  /* 960px 이상: 오른쪽 빈 칸에 고정 (기존 값 그대로) */
+  .step3-toc {
+    position: fixed;
+    z-index: 2;
+    inset-block-start: calc(var(--header-height) + 12px);
+    inset-inline-end: 16px;
+    max-width: min(240px, calc(100% - 32px));
+    max-height: calc(100dvh - var(--header-height) - 24px);
+    overflow: auto;
   }
 }
 
