@@ -65,7 +65,7 @@ function updateLearnProgress() {
     const btn = item.querySelector(".btn");
 
     item.classList.remove("step-item--done", "step-item--current");
-    tag.classList.remove("tag--done", "tag--current");
+    tag.classList.remove("tag--done", "tag--doing", "tag--before", "tag--current");
     btn.classList.remove("btn--primary", "btn--outline");
 
     if (status === "done") {
@@ -76,11 +76,12 @@ function updateLearnProgress() {
       btn.textContent = "다시 보기 →";
     } else if (status === "doing") {
       item.classList.add("step-item--current");
-      tag.classList.add("tag--current");
+      tag.classList.add("tag--doing");
       tag.textContent = "진행 중";
       btn.classList.add("btn--primary");
       btn.textContent = "이어서 학습하기 →";
     } else {
+      tag.classList.add("tag--before");
       tag.textContent = "학습 전";
       btn.classList.add("btn--outline");
       btn.textContent = "학습하기 →";
