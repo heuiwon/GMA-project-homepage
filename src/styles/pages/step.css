@@ -97,8 +97,9 @@
   }
 }
 
+/* 기본 = 모바일 (601px 이상은 아래 미디어 쿼리) */
 .step3 .step3-section--text {
-  min-height: 238px;
+  min-height: 150px;
 }
 
 .step3 .content-section__body {
@@ -143,9 +144,17 @@
   overflow-wrap: anywhere;
 }
 
+/* 기본 = 모바일: 프롬프트 글과 복사 버튼을 세로로 */
 .step3 .prompt-box {
   min-height: 157px;
   padding-inline-end: clamp(20px, 3.5vw, 50px);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.step3 .prompt-box .btn {
+  align-self: flex-end;
 }
 
 .step3 .step3-lesson .prompt-box {
@@ -173,46 +182,15 @@
   background: var(--color-bg-sub);
 }
 
-@media (max-width: 600px) {
-  .step3 .header {
-    padding-inline: 16px;
-  }
-
-  .step3 .header__logo {
-    margin-left: -26px;
-  }
-
-  .step3 .header__logo img {
-    height: 52px;
-  }
-
-  .step3 .header__nav {
-    gap: 12px;
-  }
-
-  .step3 .header__link {
-    font-size: var(--fs-13);
-  }
-
-  .step3 .footer {
-    padding-inline: 16px;
-  }
-
-  .step3 .footer__links {
-    flex-wrap: wrap;
-  }
-
+/* 601px 이상: 원래 값 (헤더·푸터는 공통 header.css, footer.css가 처리) */
+@media (min-width: 601px) {
   .step3 .step3-section--text {
-    min-height: 150px;
+    min-height: 238px;
   }
 
   .step3 .prompt-box {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .step3 .prompt-box .btn {
-    align-self: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
   }
 }
