@@ -47,7 +47,7 @@
   height: 106px;
 }
 .feature-card--lg .feature-card__title {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .feature-card--lg .feature-card__desc {
   font-size: var(--fs-24);

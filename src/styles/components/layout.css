@@ -11,11 +11,11 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
   width: 100%;
   max-width: calc(var(--content-width) + var(--page-padding-x) * 2);
   margin: 0 auto;
-  padding: 48px var(--page-padding-x) 80px;
+  padding: 3rem var(--page-padding-x) 5rem;
 }
 
 /* 상세 페이지(Step 상세, 학업 상세)는 블록 사이 간격 32 */

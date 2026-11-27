@@ -14,9 +14,13 @@
 }
 .footer__links {
   display: flex;
-  gap: 16px; /* 피그마는 공백 4칸으로 띄움 → 16px로 맞춤 (확인 필요) */
+  flex-wrap: wrap; /* 추가: 자리가 모자라면 링크 단위로 다음 줄로 */
+  gap: 4px 16px; /* 변경: 줄 사이 4px, 링크 사이 16px */
   font-size: var(--fs-14);
   font-weight: 500;
+}
+.footer__links a {
+  white-space: nowrap; /* 추가: 링크 글자가 중간에서 깨지지 않게 */
 }
 .footer__copy {
   font-size: var(--fs-13);
