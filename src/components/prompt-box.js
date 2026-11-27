@@ -2,7 +2,7 @@ import Mustache from 'mustache';
 
 //페이지의 모든 프롬프트 박스 준비하기
 export function initPromptBoxes(){
-    const boxes = document.querySelectorAll('.prompt-box');
+    const boxes = document.querySelectorAll('.prompt-box--fill');
 
     for(let i=0;i<boxes.length;i++){
         setupBox(boxes[i]);
@@ -12,7 +12,7 @@ export function initPromptBoxes(){
 //프롬프트 박스 하나
 //문장 속 {{이름}}을 입력칸으로 바꾸고, 복사하기 버튼에 클릭 동작 연결
 function setupBox(box){
-    const textE1 = box.querySelector('.promt-box__text');
+    const textE1 = box.querySelector('.prompt-box__text');
     const template = textE1.textContent.trim();
 
     // ---------- 1) {{이름}} 자리에 입력칸 넣기 ----------
@@ -85,7 +85,7 @@ function setupBox(box){
 
         try{
             await navigator.clipboard.writeText(text);
-            button.textContent = '복사됨';
+            button.textContent = '복사됨✅';
         }catch(error){
             button.textContent = '복사 실패';
         }
