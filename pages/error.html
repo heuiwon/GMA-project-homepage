@@ -13,12 +13,14 @@
   <!-- 공통 컴포넌트: Header (현재 메뉴: home) -->
   <header id="header" data-active="home"></header>
 
-  <main id="main">
-    <!-- PAGE 8. 에러 페이지 -->
-    <section class="error-box">
-      <h1>페이지를 불러오지 못했어요.</h1>
-      <p>네트워크 연결을 확인하거나 잠시 후 다시 시도해 주세요.</p>
-      <div class="error-actions" id="error-actions"></div>
+  <main class="error-page" id="main">
+    <!-- PAGE 8. 에러 페이지 (오류 안내 스타일: styles/components/error-message.css) -->
+    <section class="error-message">
+      <img class="error-message__icon" src="/images/icons/error.svg" alt="" />
+      <h1 class="error-message__title">페이지를 불러오지 못했어요.</h1>
+      <p class="error-message__desc">네트워크 연결을 확인하거나 잠시 후 다시 시도해 주세요.</p>
+      <!-- 공통 컴포넌트: Button 2개를 error.js 가 넣음 -->
+      <div class="error-message__actions" id="error-actions"></div>
     </section>
   </main>
 
